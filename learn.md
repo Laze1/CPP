@@ -29,3 +29,11 @@ void test2(){
 }
 ```
 赋值将从右向左传递，88将首先被赋给steinway。
+
+#### cin
+从键盘输入
+```c++
+int a;
+std::cin >> a;
+std::cout << a+1;
+```
