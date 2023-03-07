@@ -3,12 +3,7 @@
 using namespace std;
 
 int main() {
-    unsigned x = 555;
-    unsigned short y = 40000;
-    int du;
-    cout<< "Please enter a Celsius value:";
-    cin>> du;
-    cout<< du <<" degrees Celsius is "<< 1.8*du+32 <<" degrees Fahrenheit";
-    cout << endl << x << " + "<< y;
+    char slifs[4] {'h','u',1122011, '\0'};
+    char tlifs[4] {'h','u',112, '\0'};
     return 0;
 }
