@@ -102,3 +102,21 @@ hand = cards;               //not allowed
 ```
 
 #### 字符串
+
+C风格字符串具有一种特殊的性质：以空字符结尾，空字符被写作\0，其ASCII码为0，用来标记字符串的结尾。
+```c++
+char dog[8] = {'b','e','a','u','x',' ','i','i'};    //not a string
+char cat[8] = {'b','e','a','u','x','s','a','\0'};   //a string
+```
+这两个数组都是 char 数组，但只有第二个数组是字符串。空字符对 C-风格字符串而言至关重要。例如C++有很多处理字符串的函数，其中包括 cout 使用的那些函数。它们都逐个地处理字符串中的字符，直到到达空字符为止。
+
+另一种更好的方法：
+```C++
+char bird[11] = "Mr. Cheeps";    //the \0 is understood
+char fish[] = "Bubbles";        //let the compiler count
+```
+C++对字符串长度没有限制。
+![将数组初始化为字符串](img/string.png)
+
+字符串常量（双引号）不能与字符常量（单引号）互换。
+
