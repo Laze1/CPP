@@ -120,3 +120,29 @@ C++对字符串长度没有限制。
 
 字符串常量（双引号）不能与字符常量（单引号）互换。
 
+```c++
+std::string str = "this is a string！"
+```
+
+#### 结构化
+
+```c++
+struct inflatable {         //定义
+    char name[20];
+    float volume;
+    double price;
+};
+
+//使用
+inflatable ball = {         //初始化
+        "basktball", 2.5, 22.88
+};
+cout<< ball.name << endl;   //使用
+cout<< ball.volume << endl;
+cout<< ball.price << endl;
+```
+
+### 指针和自由存储空间
+home 变量，使用&home即可获得它的地址。
+
+
