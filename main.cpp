@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Log/Log.h"
+#include "Log/LogX.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ void test() {
 }
 
 
-int main() {
-    initLog();
-    test();
-}
+//int main() {
+//    initLog();
+//    test();
+//}
