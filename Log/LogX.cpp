@@ -6,14 +6,19 @@
 
 class LogX {
 public:
-    enum Level {
+     enum Level {
         NONE, ERROR, WARN, INFO
     };
 private:
-    Level level = INFO;
+    Level level;
 public:
+    void initLog() {
+        system("chcp 65001");
+        setLevel(INFO);
+    }
+
     void setLevel(Level newLevel) {
-        this->level = newLevel;
+        level = newLevel;
     }
 
     void info(const char *message) {
@@ -32,10 +37,10 @@ public:
     }
 };
 
-int main() {
-    LogX logX;
-    logX.setLevel(LogX::WARN);
-    logX.info("info");
-    logX.warn("warn");
-    logX.error("error");
-}
+//int main() {
+//    LogX::initLog();
+//    LogX::setLevel(LogX::WARN);
+//    LogX::info("info");
+//    LogX::warn("warn");
+//    LogX::error("error");
+//}
