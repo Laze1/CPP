@@ -145,4 +145,8 @@ cout<< ball.price << endl;
 ### 指针和自由存储空间
 home 变量，使用&home即可获得它的地址。
 
+一种特殊类型的变量——指针用于存储值的地址。*运算符被称为间接值(indiret velue)或解除引用(dereferencing)运算符，将其应用于指针，可以得到该地址处存储的值。
+
+假设 manly 是一个指针，则manly 表示的是一个地址，而*manly 表示存储在该地址处的值。*manly 与常规int 变量等效。
+
 

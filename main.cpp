@@ -1,19 +1,36 @@
 #include <iostream>
+#include "Log/Log.h"
 
 using namespace std;
 
-struct inflatable {
-    char name[20];
-    float volume;
-    double price;
+
+class Player {
+public:
+    int x, y;
+    int speed;
+
+    void move(int xa, int ya) {
+        x += xa * speed;
+        y += ya * speed;
+    }
+
+    //当前位置
+    void currentPosition() const {
+        cout << "x: " << x << " y: " << y << endl;
+    }
 };
 
+
+void test() {
+    Player player{1, 2, 3};
+    player.currentPosition();
+    player.move(1, -1);
+    player.currentPosition();
+    player.currentPosition();
+}
+
+
 int main() {
-    inflatable ball = {
-            "basktball", 2.5, 22.88
-    };
-    cout<< ball.name << endl;
-    cout<< ball.volume << endl;
-    cout<< ball.price << endl;
-    return 0;
+    initLog();
+    test();
 }
